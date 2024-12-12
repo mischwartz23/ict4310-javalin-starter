@@ -215,7 +215,7 @@ will get the default message of <code>Hello from Javalin!</code></li>
 <code>pom.xml</code> dependencies were updated to include the
 logger)</li>
 </ul>
-<p><strong>SimpleServer0.java</strong></p>
+<p><strong>initial/SimpleServer.java</strong></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">package</span><span class="im"> edu</span><span class="op">.</span><span class="im">du</span><span class="op">.</span><span class="im">ict4310</span><span class="op">;</span></span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">import</span> <span class="im">io</span><span class="op">.</span><span class="im">javalin</span><span class="op">.</span><span class="im">Javalin</span><span class="op">;</span></span>
@@ -224,7 +224,7 @@ logger)</li>
 <span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a> <span class="co">*</span></span>
 <span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"> * </span><span class="an">@author</span> schwartz</span>
 <span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a> <span class="co">*/</span></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SimpleServer0 <span class="op">{</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SimpleServer <span class="op">{</span></span>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> PORT <span class="op">=</span> <span class="dv">4310</span><span class="op">;</span> <span class="co">// Default port number</span></span>
 <span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a></span>
@@ -252,17 +252,17 @@ logger)</li>
 <span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a></span>
 <span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a>  <span class="co">// Contructors / Builders</span></span>
-<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">SimpleServer0</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">SimpleServer</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">port</span> <span class="op">=</span> port<span class="op">;</span></span>
 <span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">jApp</span> <span class="op">=</span> Javalin<span class="op">.</span><span class="fu">create</span><span class="op">();</span></span>
 <span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> SimpleServer0 <span class="fu">create</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> SimpleServer <span class="fu">create</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">create</span><span class="op">(</span>PORT<span class="op">);</span></span>
 <span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a></span>
-<span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> SimpleServer0 <span class="fu">create</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-47"><a href="#cb4-47" tabindex="-1"></a>    SimpleServer0 app <span class="op">=</span> <span class="kw">new</span> <span class="fu">SimpleServer0</span><span class="op">(</span>port<span class="op">);</span></span>
+<span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> SimpleServer <span class="fu">create</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-47"><a href="#cb4-47" tabindex="-1"></a>    SimpleServer app <span class="op">=</span> <span class="kw">new</span> <span class="fu">SimpleServer</span><span class="op">(</span>port<span class="op">);</span></span>
 <span id="cb4-48"><a href="#cb4-48" tabindex="-1"></a>    <span class="cf">return</span> app<span class="op">;</span></span>
 <span id="cb4-49"><a href="#cb4-49" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-50"><a href="#cb4-50" tabindex="-1"></a></span>
@@ -276,8 +276,8 @@ logger)</li>
 <span id="cb4-58"><a href="#cb4-58" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb4-59"><a href="#cb4-59" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 </div>
-<div id="simpleserver0-sample-output" class="slide section level1">
-<h1>SimpleServer0 sample output</h1>
+<div id="simpleserver-sample-output" class="slide section level1">
+<h1>SimpleServer sample output</h1>
 <ul>
 <li>The sample output includes Logger output (removed in the example
 code here)</li>
@@ -303,8 +303,8 @@ code here)</li>
 [JettyServerThreadPool-22] INFO edu.du.ict4310.SimpleServer - GET request on localhost:4310 from [0:0:0:0:0:0:0:1]
 [JettyServerThreadPool-22] INFO edu.du.ict4310.SimpleServer - Context:  Query: null</code></pre>
 </div>
-<div id="simple-javalin-server-2-of-2" class="slide section level1">
-<h1>Simple Javalin Server (2 of 2)</h1>
+<div id="simple-javalin-server-routessimpleserver.java-2-of-2" class="slide section level1">
+<h1>Simple Javalin Server routes/SimpleServer.java (2 of 2)</h1>
 <ul>
 <li>Next, we’ll add some routes and route handlers.
 <ul>
@@ -421,7 +421,7 @@ copied to the <code>target/classes/public</code> directory</li>
 <code>localhost:4310/index.html</code></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a> <span class="kw">private</span> <span class="fu">SimpleServer1</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a> <span class="kw">private</span> <span class="fu">SimpleServer</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">port</span> <span class="op">=</span> port<span class="op">;</span></span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">jApp</span> <span class="op">=</span> Javalin<span class="op">.</span><span class="fu">create</span><span class="op">(</span>config <span class="op">-&gt;</span> <span class="op">{</span></span>
 <span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>      config<span class="op">.</span><span class="fu">staticFiles</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">&quot;/public&quot;</span><span class="op">,</span> <span class="bu">Location</span><span class="op">.</span><span class="fu">CLASSPATH</span><span class="op">);</span></span>
@@ -439,7 +439,7 @@ requests.
 to certain hosts.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a> <span class="kw">private</span> <span class="fu">SimpleServer1</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a> <span class="kw">private</span> <span class="fu">SimpleServer</span><span class="op">(</span><span class="dt">int</span> port<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">port</span> <span class="op">=</span> port<span class="op">;</span></span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">jApp</span> <span class="op">=</span> Javalin<span class="op">.</span><span class="fu">create</span><span class="op">(</span>config <span class="op">-&gt;</span> <span class="op">{</span></span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>      config<span class="op">.</span><span class="fu">staticFiles</span><span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">&quot;/public&quot;</span><span class="op">,</span> <span class="bu">Location</span><span class="op">.</span><span class="fu">CLASSPATH</span><span class="op">);</span></span>
